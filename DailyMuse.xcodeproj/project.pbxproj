@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F142F4EC2DD893EE009FD1C2 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = F142F4EB2DD893EE009FD1C2 /* StableDiffusion */; };
+		F1F7128F2DDCAF6800FD62BB /* ai_model in Resources */ = {isa = PBXBuildFile; fileRef = F1F7128E2DDCAF6800FD62BB /* ai_model */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F1F5D41A2DD7894D001CBA66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +32,25 @@
 		F1F5D4092DD7894B001CBA66 /* DailyMuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyMuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F5D4192DD7894D001CBA66 /* DailyMuseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMuseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F5D4232DD7894D001CBA66 /* DailyMuseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMuseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F7128E2DDCAF6800FD62BB /* ai_model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ai_model; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F1F5D4532DD794C9001CBA66 /* Exceptions for "DailyMuse" folder in "DailyMuse" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F1F5D4082DD7894B001CBA66 /* DailyMuse */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F1F5D40B2DD7894B001CBA66 /* DailyMuse */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F1F5D4532DD794C9001CBA66 /* Exceptions for "DailyMuse" folder in "DailyMuse" target */,
+			);
 			path = DailyMuse;
 			sourceTree = "<group>";
 		};
@@ -52,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F142F4EC2DD893EE009FD1C2 /* StableDiffusion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +95,7 @@
 		F1F5D4002DD7894B001CBA66 = {
 			isa = PBXGroup;
 			children = (
+				F1F7128E2DDCAF6800FD62BB /* ai_model */,
 				F1F5D40B2DD7894B001CBA66 /* DailyMuse */,
 				F1F5D41C2DD7894D001CBA66 /* DailyMuseTests */,
 				F1F5D4262DD7894D001CBA66 /* DailyMuseUITests */,
@@ -112,6 +133,7 @@
 			);
 			name = DailyMuse;
 			packageProductDependencies = (
+				F142F4EB2DD893EE009FD1C2 /* StableDiffusion */,
 			);
 			productName = DailyMuse;
 			productReference = F1F5D4092DD7894B001CBA66 /* DailyMuse.app */;
@@ -195,6 +217,9 @@
 			);
 			mainGroup = F1F5D4002DD7894B001CBA66;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F142F4EA2DD893EE009FD1C2 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F1F5D40A2DD7894B001CBA66 /* Products */;
 			projectDirPath = "";
@@ -212,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F7128F2DDCAF6800FD62BB /* ai_model in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +425,8 @@
 				DEVELOPMENT_TEAM = 7S5SYP2B3R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyMuse/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To download the images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +456,8 @@
 				DEVELOPMENT_TEAM = 7S5SYP2B3R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyMuse/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To download the images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +588,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F142F4EA2DD893EE009FD1C2 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/ml-stable-diffusion.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F142F4EB2DD893EE009FD1C2 /* StableDiffusion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F142F4EA2DD893EE009FD1C2 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			productName = StableDiffusion;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1F5D4012DD7894B001CBA66 /* Project object */;
 }
