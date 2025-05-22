@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F137A88D2DDF92B400C133E0 /* sd_models in Resources */ = {isa = PBXBuildFile; fileRef = F137A88C2DDF92B400C133E0 /* sd_models */; };
 		F142F4EC2DD893EE009FD1C2 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = F142F4EB2DD893EE009FD1C2 /* StableDiffusion */; };
-		F1F7128F2DDCAF6800FD62BB /* ai_model in Resources */ = {isa = PBXBuildFile; fileRef = F1F7128E2DDCAF6800FD62BB /* ai_model */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F137A88C2DDF92B400C133E0 /* sd_models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sd_models; sourceTree = "<group>"; };
 		F1F5D4092DD7894B001CBA66 /* DailyMuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyMuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F5D4192DD7894D001CBA66 /* DailyMuseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMuseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F5D4232DD7894D001CBA66 /* DailyMuseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMuseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1F7128E2DDCAF6800FD62BB /* ai_model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ai_model; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -95,7 +95,7 @@
 		F1F5D4002DD7894B001CBA66 = {
 			isa = PBXGroup;
 			children = (
-				F1F7128E2DDCAF6800FD62BB /* ai_model */,
+				F137A88C2DDF92B400C133E0 /* sd_models */,
 				F1F5D40B2DD7894B001CBA66 /* DailyMuse */,
 				F1F5D41C2DD7894D001CBA66 /* DailyMuseTests */,
 				F1F5D4262DD7894D001CBA66 /* DailyMuseUITests */,
@@ -237,7 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F7128F2DDCAF6800FD62BB /* ai_model in Resources */,
+				F137A88D2DDF92B400C133E0 /* sd_models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

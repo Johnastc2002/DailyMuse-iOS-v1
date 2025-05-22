@@ -22,7 +22,7 @@ private let logger = Logger(
     // MARK: - Properties
     
     /// How to add folder in bundle: https://stackoverflow.com/a/79096098
-    let resourceURL = "ai_model/coreml-stable-diffusion-v1-5-palettized_original"
+    let resourceURL = "sd_models/coreml-stable-diffusion-v1-5-palettized_original"
     
     let pipeline: StableDiffusionPipeline
     
