@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F137A88D2DDF92B400C133E0 /* sd_models in Resources */ = {isa = PBXBuildFile; fileRef = F137A88C2DDF92B400C133E0 /* sd_models */; };
 		F142F4EC2DD893EE009FD1C2 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = F142F4EB2DD893EE009FD1C2 /* StableDiffusion */; };
+		F1ABC0042DE0CC2F005551E9 /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1ABC0032DE0CC2F005551E9 /* MLCSwift */; };
+		F1EB6C5D2DDFB26600EAEDD5 /* config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F1EB6C5C2DDFB26600EAEDD5 /* config.xcconfig */; };
+		F1EB6E9F2DE0BC7600EAEDD5 /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = F1EB6E9E2DE0BC7600EAEDD5 /* bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		F137A88C2DDF92B400C133E0 /* sd_models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sd_models; sourceTree = "<group>"; };
+		F1EB6C5C2DDFB26600EAEDD5 /* config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.xcconfig; sourceTree = "<group>"; };
+		F1EB6E9E2DE0BC7600EAEDD5 /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bundle; path = llm_models/dist/bundle; sourceTree = "<group>"; };
 		F1F5D4092DD7894B001CBA66 /* DailyMuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyMuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F5D4192DD7894D001CBA66 /* DailyMuseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMuseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F5D4232DD7894D001CBA66 /* DailyMuseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMuseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F142F4EC2DD893EE009FD1C2 /* StableDiffusion in Frameworks */,
+				F1ABC0042DE0CC2F005551E9 /* MLCSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +101,13 @@
 		F1F5D4002DD7894B001CBA66 = {
 			isa = PBXGroup;
 			children = (
+				F1EB6E9E2DE0BC7600EAEDD5 /* bundle */,
 				F137A88C2DDF92B400C133E0 /* sd_models */,
 				F1F5D40B2DD7894B001CBA66 /* DailyMuse */,
 				F1F5D41C2DD7894D001CBA66 /* DailyMuseTests */,
 				F1F5D4262DD7894D001CBA66 /* DailyMuseUITests */,
 				F1F5D40A2DD7894B001CBA66 /* Products */,
+				F1EB6C5C2DDFB26600EAEDD5 /* config.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +142,7 @@
 			name = DailyMuse;
 			packageProductDependencies = (
 				F142F4EB2DD893EE009FD1C2 /* StableDiffusion */,
+				F1ABC0032DE0CC2F005551E9 /* MLCSwift */,
 			);
 			productName = DailyMuse;
 			productReference = F1F5D4092DD7894B001CBA66 /* DailyMuse.app */;
@@ -219,6 +228,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				F142F4EA2DD893EE009FD1C2 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+				F1ABC0022DE0CC0C005551E9 /* XCLocalSwiftPackageReference "MLCSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F1F5D40A2DD7894B001CBA66 /* Products */;
@@ -237,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1EB6E9F2DE0BC7600EAEDD5 /* bundle in Resources */,
+				F1EB6C5D2DDFB26600EAEDD5 /* config.xcconfig in Resources */,
 				F137A88D2DDF92B400C133E0 /* sd_models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +309,7 @@
 /* Begin XCBuildConfiguration section */
 		F1F5D42B2DD7894D001CBA66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1EB6C5C2DDFB26600EAEDD5 /* config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -360,6 +373,7 @@
 		};
 		F1F5D42C2DD7894D001CBA66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1EB6C5C2DDFB26600EAEDD5 /* config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -589,6 +603,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		F1ABC0022DE0CC0C005551E9 /* XCLocalSwiftPackageReference "MLCSwift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MLCSwift;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		F142F4EA2DD893EE009FD1C2 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -605,6 +626,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F142F4EA2DD893EE009FD1C2 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
 			productName = StableDiffusion;
+		};
+		F1ABC0032DE0CC2F005551E9 /* MLCSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MLCSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

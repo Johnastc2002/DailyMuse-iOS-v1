@@ -1,0 +1,8 @@
+// 真機：設定 library search path
+LIBRARY_SEARCH_PATHS[sdk=iphoneos*] = $(PROJECT_DIR)/llm_models/dist/lib
+
+// 模擬器：唔設定，變相係空
+LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*] = $(PROJECT_DIR)/mlc-test/dist/lib
+
+OTHER_LDFLAGS[sdk=iphoneos*] = -Wl,-all_load -lmlc_llm -ltvm_runtime -ltokenizers_cpp -lsentencepiece -ltokenizers_c -lmodel_iphone
+OTHER_LDFLAGS[sdk=iphonesimulator*] = -Wl,-all_load -lmlc_llm -ltvm_runtime -ltokenizers_cpp -lsentencepiece -ltokenizers_c -lmodel_iphone
