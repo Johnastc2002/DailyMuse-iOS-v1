@@ -1,0 +1,32 @@
+// Common
+FRAMEWORK_SEARCH_PATHS = $(inherited)
+
+EXCLUDED_ARCHS = x86_64
+
+// iOS
+FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*] = $(inherited) $(SRCROOT)/../../Models/llm_models/dist/lib/ios
+
+// iOS-Simulator
+FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*] = $(inherited) $(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator
+
+// iOS
+OTHER_LDFLAGS[sdk=iphoneos*] = \
+  -framework Metal \
+  -lc++ \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libmlc_llm.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libtvm_runtime.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libtokenizers_cpp.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libsentencepiece.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libtokenizers_c.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libmodel_iphone.a"
+
+// iOS-Simulator
+OTHER_LDFLAGS[sdk=iphonesimulator*] = \
+  -framework Metal \
+  -lc++ \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libmlc_llm.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libtvm_runtime.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libtokenizers_cpp.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libsentencepiece.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libtokenizers_c.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libmodel_iphone.a"

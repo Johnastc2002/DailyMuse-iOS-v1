@@ -84,6 +84,12 @@ struct LLMView: View {
                 let items = try fileManager.contentsOfDirectory(at: bundleURL, includingPropertiesForKeys: nil)
                 for item in items {
                     print(item.lastPathComponent)
+                    if item.lastPathComponent == "bundle" {
+                        let bundleItems = try fileManager.contentsOfDirectory(at: item, includingPropertiesForKeys: nil)
+                        for bundleItem in bundleItems {
+                            print(bundleItem.lastPathComponent)
+                        }
+                    }
                 }
             } catch {
                 print("❌ Failed to list top-level bundle files: \(error)")
