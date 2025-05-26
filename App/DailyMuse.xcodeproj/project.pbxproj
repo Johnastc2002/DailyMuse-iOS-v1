@@ -10,9 +10,9 @@
 		F10918A02DE4D0970024B690 /* MLCSwiftBinarySupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F109189B2DE4D03D0024B690 /* MLCSwiftBinarySupport.framework */; };
 		F10918A12DE4D0970024B690 /* MLCSwiftBinarySupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F109189B2DE4D03D0024B690 /* MLCSwiftBinarySupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F113AA552DE4D17A007BD3C1 /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F115CCD62DE4BD400034DE4D /* MLCSwift */; };
-		F115CCCF2DE4B8F10034DE4D /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = F115CCCE2DE4B8F10034DE4D /* bundle */; };
 		F115CCD12DE4B8FD0034DE4D /* sd_models in Resources */ = {isa = PBXBuildFile; fileRef = F115CCD02DE4B8FD0034DE4D /* sd_models */; };
 		F115CCDA2DE4C1C90034DE4D /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = F115CCD92DE4C1C90034DE4D /* StableDiffusion */; };
+		F1C593912DE51DBE007D5E6B /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = F1C593902DE51DBE007D5E6B /* bundle */; };
 		F1EB6C5D2DDFB26600EAEDD5 /* config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F1EB6C5C2DDFB26600EAEDD5 /* config.xcconfig */; };
 		F1FFA7CE2DE4C85F0025C3C0 /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1ABC0032DE0CC2F005551E9 /* MLCSwift */; };
 /* End PBXBuildFile section */
@@ -64,8 +64,8 @@
 
 /* Begin PBXFileReference section */
 		F10918952DE4D03D0024B690 /* MLCSwiftBinarySupport.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MLCSwiftBinarySupport.xcodeproj; path = ../Frameworks/MLCSwiftBinarySupport/MLCSwiftBinarySupport.xcodeproj; sourceTree = "<group>"; };
-		F115CCCE2DE4B8F10034DE4D /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bundle; path = ../Models/llm_models/dist/bundle; sourceTree = "<group>"; };
 		F115CCD02DE4B8FD0034DE4D /* sd_models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sd_models; path = ../Models/sd_models; sourceTree = "<group>"; };
+		F1C593902DE51DBE007D5E6B /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bundle; path = ../Models/llm_models/bundle; sourceTree = "<group>"; };
 		F1EB6C5C2DDFB26600EAEDD5 /* config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.xcconfig; sourceTree = "<group>"; };
 		F1F5D4092DD7894B001CBA66 /* DailyMuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyMuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F5D4192DD7894D001CBA66 /* DailyMuseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMuseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,8 +151,8 @@
 		F1F5D4002DD7894B001CBA66 = {
 			isa = PBXGroup;
 			children = (
+				F1C593902DE51DBE007D5E6B /* bundle */,
 				F115CCD02DE4B8FD0034DE4D /* sd_models */,
-				F115CCCE2DE4B8F10034DE4D /* bundle */,
 				F1F5D40B2DD7894B001CBA66 /* DailyMuse */,
 				F1F5D41C2DD7894D001CBA66 /* DailyMuseTests */,
 				F1F5D4262DD7894D001CBA66 /* DailyMuseUITests */,
@@ -317,8 +317,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C593912DE51DBE007D5E6B /* bundle in Resources */,
 				F115CCD12DE4B8FD0034DE4D /* sd_models in Resources */,
-				F115CCCF2DE4B8F10034DE4D /* bundle in Resources */,
 				F1EB6C5D2DDFB26600EAEDD5 /* config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

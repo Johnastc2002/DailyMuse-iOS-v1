@@ -13,20 +13,20 @@ FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*] = $(inherited) $(SRCROOT)/../../Mod
 OTHER_LDFLAGS[sdk=iphoneos*] = \
   -framework Metal \
   -lc++ \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libmlc_llm.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libtvm_runtime.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libtokenizers_cpp.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libsentencepiece.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libtokenizers_c.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios/libmodel_iphone.a"
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios/libmlc_llm.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios/libtvm_runtime.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios/libtokenizers_cpp.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios/libsentencepiece.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios/libtokenizers_c.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios/libmodel_iphone.a"
 
 // iOS-Simulator
 OTHER_LDFLAGS[sdk=iphonesimulator*] = \
   -framework Metal \
   -lc++ \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libmlc_llm.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libtvm_runtime.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libtokenizers_cpp.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libsentencepiece.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libtokenizers_c.a" \
-  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/dist/lib/ios-simulator/libmodel_iphone.a"
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios-simulator/libmlc_llm.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios-simulator/libtvm_runtime.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios-simulator/libtokenizers_cpp.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios-simulator/libsentencepiece.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios-simulator/libtokenizers_c.a" \
+  -Wl,-force_load,"$(SRCROOT)/../../Models/llm_models/lib/ios-simulator/libmodel_iphone.a"
