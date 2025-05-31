@@ -1,5 +1,5 @@
 //
-//  SettingsView.swift
+//  SettingsScreen.swift
 //  DailyMuse
 //
 //  Created by tough on 16/5/2025.
@@ -8,7 +8,7 @@
 import SwiftUI
 import os.log
 
-struct SettingsView: View {
+struct SettingsScreen: View {
     // MARK: - Environment
     @Environment(\.dismiss) private var dismiss
     
@@ -64,5 +64,5 @@ struct SettingsView: View {
 
 // MARK: - Preview
 #Preview {
-    SettingsView()
+    SettingsScreen()
 } 

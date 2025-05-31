@@ -11,10 +11,12 @@
 		F10918A12DE4D0970024B690 /* MLCSwiftBinarySupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F109189B2DE4D03D0024B690 /* MLCSwiftBinarySupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F113AA552DE4D17A007BD3C1 /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F115CCD62DE4BD400034DE4D /* MLCSwift */; };
 		F115CCD12DE4B8FD0034DE4D /* sd_models in Resources */ = {isa = PBXBuildFile; fileRef = F115CCD02DE4B8FD0034DE4D /* sd_models */; };
-		F115CCDA2DE4C1C90034DE4D /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = F115CCD92DE4C1C90034DE4D /* StableDiffusion */; };
 		F1C593912DE51DBE007D5E6B /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = F1C593902DE51DBE007D5E6B /* bundle */; };
+		F1E1D9362DEB51D4000F2597 /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1ABC0032DE0CC2F005551E9 /* MLCSwift */; };
+		F1E1D9622DEB5672000F2597 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = F1E1D9612DEB5672000F2597 /* StableDiffusion */; };
+		F1E1D9652DEB5683000F2597 /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1E1D9642DEB5683000F2597 /* MLCSwift */; };
+		F1E1D9682DEB56A7000F2597 /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1E1D9672DEB56A7000F2597 /* MLCSwift */; };
 		F1EB6C5D2DDFB26600EAEDD5 /* config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F1EB6C5C2DDFB26600EAEDD5 /* config.xcconfig */; };
-		F1FFA7CE2DE4C85F0025C3C0 /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1ABC0032DE0CC2F005551E9 /* MLCSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,10 +110,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E1D9362DEB51D4000F2597 /* MLCSwift in Frameworks */,
+				F1E1D9622DEB5672000F2597 /* StableDiffusion in Frameworks */,
 				F113AA552DE4D17A007BD3C1 /* MLCSwift in Frameworks */,
-				F1FFA7CE2DE4C85F0025C3C0 /* MLCSwift in Frameworks */,
-				F115CCDA2DE4C1C90034DE4D /* StableDiffusion in Frameworks */,
+				F1E1D9652DEB5683000F2597 /* MLCSwift in Frameworks */,
 				F10918A02DE4D0970024B690 /* MLCSwiftBinarySupport.framework in Frameworks */,
+				F1E1D9682DEB56A7000F2597 /* MLCSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +200,9 @@
 			packageProductDependencies = (
 				F1ABC0032DE0CC2F005551E9 /* MLCSwift */,
 				F115CCD62DE4BD400034DE4D /* MLCSwift */,
-				F115CCD92DE4C1C90034DE4D /* StableDiffusion */,
+				F1E1D9612DEB5672000F2597 /* StableDiffusion */,
+				F1E1D9642DEB5683000F2597 /* MLCSwift */,
+				F1E1D9672DEB56A7000F2597 /* MLCSwift */,
 			);
 			productName = DailyMuse;
 			productReference = F1F5D4092DD7894B001CBA66 /* DailyMuse.app */;
@@ -281,8 +287,8 @@
 			mainGroup = F1F5D4002DD7894B001CBA66;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				F115CCD52DE4BD400034DE4D /* XCLocalSwiftPackageReference "../Packages/MLCSwift" */,
-				F115CCD82DE4C1C90034DE4D /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+				F1E1D9602DEB5672000F2597 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+				F1E1D9662DEB56A7000F2597 /* XCLocalSwiftPackageReference "../Submodules/mlc-llm/ios/MLCSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F1F5D40A2DD7894B001CBA66 /* Products */;
@@ -679,14 +685,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		F115CCD52DE4BD400034DE4D /* XCLocalSwiftPackageReference "../Packages/MLCSwift" */ = {
+		F1E1D9662DEB56A7000F2597 /* XCLocalSwiftPackageReference "../Submodules/mlc-llm/ios/MLCSwift" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Packages/MLCSwift;
+			relativePath = "../Submodules/mlc-llm/ios/MLCSwift";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F115CCD82DE4C1C90034DE4D /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
+		F1E1D9602DEB5672000F2597 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/ml-stable-diffusion/";
 			requirement = {
@@ -701,12 +707,20 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = MLCSwift;
 		};
-		F115CCD92DE4C1C90034DE4D /* StableDiffusion */ = {
+		F1ABC0032DE0CC2F005551E9 /* MLCSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F115CCD82DE4C1C90034DE4D /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			productName = MLCSwift;
+		};
+		F1E1D9612DEB5672000F2597 /* StableDiffusion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1E1D9602DEB5672000F2597 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
 			productName = StableDiffusion;
 		};
-		F1ABC0032DE0CC2F005551E9 /* MLCSwift */ = {
+		F1E1D9642DEB5683000F2597 /* MLCSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MLCSwift;
+		};
+		F1E1D9672DEB56A7000F2597 /* MLCSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MLCSwift;
 		};

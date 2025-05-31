@@ -1,5 +1,5 @@
 //
-//  LLMView.swift
+//  LLMScreen.swift
 //  DailyMuse
 //
 //  Created by tough on 23/5/2025.
@@ -8,13 +8,13 @@
 import SwiftUI
 import os.log
 
-struct LLMView: View {
+struct LLMScreen: View {
     @State private var prompt: String = "TTT"
     @State private var generatedText: String = ""
     @State private var isGenerating: Bool = false
     @State private var errorMessage: String?
     
-    private let logger = Logger(subsystem: "com.dailymuse", category: "LLMView")
+    private let logger = Logger(subsystem: "com.dailymuse", category: "LLMScreen")
     
     var body: some View {
         VStack {
@@ -98,5 +98,5 @@ struct LLMView: View {
 }
 
 #Preview {
-    LLMView()
-}
+    LLMScreen()
+} 

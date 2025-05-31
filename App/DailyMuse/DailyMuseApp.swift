@@ -13,7 +13,7 @@ struct DailyMuseApp: App {
     // MARK: - Body
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentScreen()
         }
     }
 }

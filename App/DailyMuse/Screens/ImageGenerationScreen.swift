@@ -1,5 +1,5 @@
 //
-//  ImageGenerationView.swift
+//  ImageGenerationScreen.swift
 //  DailyMuse
 //
 //  Created by tough on 16/5/2025.
@@ -8,13 +8,13 @@
 import SwiftUI
 import os.log
 
-struct ImageGenerationView: View {
+struct ImageGenerationScreen: View {
     // MARK: - Properties
     @State private var promptText = "Happy dog"
     @State private var showingSettings = false
     @State private var viewModel = ImageGenerationViewModel()
     
-    private let logger = Logger(subsystem: "com.dailymuse", category: "ImageGenerationView")
+    private let logger = Logger(subsystem: "com.dailymuse", category: "ImageGenerationScreen")
     
     // MARK: - Body
     var body: some View {
@@ -95,7 +95,7 @@ struct ImageGenerationView: View {
                 }
             }
             .sheet(isPresented: $showingSettings) {
-                SettingsView()
+                SettingsScreen()
             }
         }
     }
@@ -109,5 +109,5 @@ struct ImageGenerationView: View {
 }
 
 #Preview {
-    ImageGenerationView()
+    ImageGenerationScreen()
 } 
