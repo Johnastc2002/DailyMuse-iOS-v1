@@ -9,6 +9,10 @@ import SwiftUI
 import os.log
 
 struct ContentScreen: View {
+    // MARK: - Properties
+    private let logger = Logger(subsystem: "com.dailymuse", category: "ContentScreen")
+    
+    // MARK: - Body
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
@@ -16,10 +20,10 @@ struct ContentScreen: View {
                     .font(.largeTitle)
                     .padding()
                 
-                NavigationLink(destination: LLMScreen()) {
-                    Text("Chat with LLM")
+                NavigationLink(destination: MuseScreen()) {
+                    Text("Start Creating")
                         .padding()
-                        .background(Color.green)
+                        .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }

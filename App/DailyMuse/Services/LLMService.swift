@@ -23,35 +23,45 @@ class LLMService {
     
     // MARK: - Initialization
     init() {
-  
+
     }
     
-    func runExample() async {
+    func prepareModel() async {
+        guard let modelURL = Bundle.main.url(forResource: modelPath, withExtension: nil) else {
+            logger.error("Model folder not found at path: \(self.modelPath)")
+            fatalError("Model folder not found")
+        }
+        
+        print("modelURL.path = \(modelURL.path)")
+        
+        await engine.reload(modelPath: modelURL.path, modelLib: modelLib)
+    }
+    
+    func unloadModel() async {
+        await engine.unload()
+    }
+    
+    func generateMuse() async -> String {
 #if targetEnvironment(simulator)
-
+        return "(iOS Simulator does not support MLC)"
 #else
-        Task {
-            guard let modelURL = Bundle.main.url(forResource: modelPath, withExtension: nil) else {
-                logger.error("Model folder not found at path: \(self.modelPath)")
-                fatalError("Model folder not found")
-            }
-            
-            print("modelURL.path = \(modelURL.path)")
-            
-            await engine.reload(modelPath: modelURL.path, modelLib: modelLib)
-            
+        var generatedQuestion = ""
+        
+            await prepareModel()
             // run chat completion as in OpenAI API style
             for await res in await engine.chat.completions.create(
                 messages: [
+                    ChatCompletionMessage(role: .system, content: "You are a spiritual muse generator. Only output one short spiritual phrase with no explanation or introduction."),
                     ChatCompletionMessage(
-                        role: .user,
-                        content: "What is the meaning of life?"
+                        role: .tool,
+                        content: MusePrompts.all.randomElement()!
                     )
-                ]
+                ], seed: Int.random(in: 1...1_000_000)
             ) {
-                print(res.choices[0].delta.content!.asText())
+                generatedQuestion.append(res.choices[0].delta.content?.asText() ?? "")
             }
-        }
+        await unloadModel()
+        return generatedQuestion
 #endif
     }
 }

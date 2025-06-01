@@ -24,10 +24,14 @@ private let logger = Logger(
     /// How to add folder in bundle: https://stackoverflow.com/a/79096098
     let resourceURL = "sd_models/coreml-stable-diffusion-v1-5-palettized_original"
     
-    let pipeline: StableDiffusionPipeline
+    var pipeline: StableDiffusionPipeline!
     
     // MARK: - Initialization
-    init() throws {
+    init() {
+        
+    }
+    
+    func initalize() throws {
         logger.debug("Starting StableDiffusionService initialization...")
         
         // Configure MLModel with memory-efficient settings
@@ -69,6 +73,8 @@ private let logger = Logger(
         config.targetSize = 512
         config.stepCount = 20
         config.guidanceScale = 7
+        config.seed = UInt32.random(in: 0...UInt32.max)
+        config.negativePrompt = "people, human, man, woman, frame, watermark, text, logo, word, blurry, lowres, bad anatomy, bad hands, missing fingers, extra limbs, jpeg artifacts, over saturation, vibrant, neon, overexposed, high contrast, unnatural color, harsh lighting"
 //        config.disableSafety = true
         logger.debug("Pipeline configuration set - Size: 512x512")
         
